@@ -6,34 +6,34 @@ import { useSelector,useDispatch } from 'react-redux';
 
 const columns = [
  
-  { field: 'id', headerName: 'id', width: 90 },
+  { field: 'id', headerName: 'ID', width: 90, },
   {
     field: 'firstname',
-    headerName: 'Finst name',
-    width: 100,
+    headerName: 'First name',
+    width: 150,
     editable: true,
   },
   
   {
     field: 'lastname',
     headerName: 'Last name',
-    width: 100,
+    width: 150,
     editable: true,
   },
-  { field: 'email', headerName: 'Email', width: 190,editable: true, },
+  { field: 'email', headerName: 'Email', editable: true, width: 140,},
   {
     field: 'address',
-    headerName: 'Age',
-    width: 50,
+    headerName: 'Address',
+    width: 140,
     editable: true,
   },
-  { field: 'income', headerName: 'Income', width: 190,editable: true, },
+  { field: 'income', headerName: 'Income', width: 140,editable: true, },
   {
     field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 160,
+    width: 120,
     valueGetter: (params) =>
       `${params.getValue(params.id, 'firstname') || ''} ${
         params.getValue(params.id, 'lastname') || ''

@@ -26,6 +26,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    sessionStorage.setItem('added', '')
     console.log(formValues);
     
     
@@ -33,6 +34,8 @@ const Form = () => {
     {dispatch({type: "ADD_EMPLOYEE", rec: response.data});
     console.log("add the reco:");
     console.log(response);
+    
+    sessionStorage.setItem('added', response.data)
     setFormValues(defaultValues);
     
   });
@@ -95,6 +98,7 @@ const Form = () => {
           Submit
         </Button>
       </Grid>
+     
     </form>
   );
 };

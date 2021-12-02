@@ -6,7 +6,7 @@ import { Paper } from '@material-ui/core';
 
 function App() {
   return (
-    <Container maxWidth="md" className="App">
+    <Container maxWidth="xl" className="App">
       
       <Paper>
         <NestedGrid />
