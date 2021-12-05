@@ -19,8 +19,11 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   paper: {
     width: "100%",
-    height: "100%"
+    height: "96.4%",
+    border:"none",
+    boxShadow: "none",
   },
+  
   
 });
 export default function NestedGrid() {
@@ -37,7 +40,7 @@ export default function NestedGrid() {
         </Toolbar>
       </AppBar>
       <Container style={{ marginTop: "1em" }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={0}>
           <Grid item container alignItems="center" xs={4}>
             <Paper className={classes.paper}>
               <Form />

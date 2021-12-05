@@ -68,6 +68,7 @@ export default function DataGridDemo() {
   return (
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid 
+        
         rows={r}
         columns={columns}
         pageSize={5}

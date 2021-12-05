@@ -54,3 +54,7 @@
   border: none;
   cursor: pointer;
 }
+
+.MuiDataGrid-row.Mui-even {
+  background-color: aliceblue;
+}
