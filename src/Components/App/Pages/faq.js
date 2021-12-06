@@ -43,8 +43,8 @@ const columns = [
 
 
 const API_URL='https://royliao.pythonanywhere.com/medical/employees/?format=json'
-const tokeninfo={Authorization: "Token 	8854d62680edf3c63c27ee8bf6d2c320cb902f51"}
-export default function DataGridDemo() {
+
+export default function Faq() {
   
   const dispatch = useDispatch();
   const r = useSelector(state => state.birds);
@@ -53,8 +53,6 @@ export default function DataGridDemo() {
       API_URL,
       {
         method: "GET",
-        headers: tokeninfo,
-
       }
     )
       .then(res => res.json())

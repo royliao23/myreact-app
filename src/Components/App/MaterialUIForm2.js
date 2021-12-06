@@ -23,14 +23,14 @@ const Form = () => {
       [name]: newValue 
     });
   };
-
+  const tokeninfo={Authorization: "Token 	8854d62680edf3c63c27ee8bf6d2c320cb902f51"}
   const handleSubmit = (event) => {
     event.preventDefault();
     sessionStorage.setItem('added', '')
     console.log(formValues);
     
     
-    axios.post('https://royliao.pythonanywhere.com/medical/employees/', formValues).then((response)=>
+    axios.post('https://royliao.pythonanywhere.com/medical/employees/',formValues,{headers: tokeninfo}).then((response)=>
     {dispatch({type: "ADD_EMPLOYEE", rec: response.data});
     console.log("add the reco:");
     console.log(response);
