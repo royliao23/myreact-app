@@ -10,7 +10,7 @@ function App() {
     <Container maxWidth="xl" className="App">
      
       <Paper>
-        < Navbar />
+        
         <NestedGrid />
       </Paper>
       
