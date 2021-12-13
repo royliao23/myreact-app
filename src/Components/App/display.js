@@ -4,21 +4,26 @@ import {  useEffect } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 
 
+
+
+
 const columns = [
+  
  
-  { field: 'id', headerName: 'ID', width: 90, },
+  { field: 'id', headerName: 'ID', minWidth: 45, },
   {
     field: 'firstname',
     headerName: 'First name',
-    width: 150,
+    minWidth: 150,
     editable: true,
   },
   
   {
     field: 'lastname',
     headerName: 'Last name',
-    width: 150,
+    minWidth: 150,
     editable: true,
+    
   },
   { field: 'email', headerName: 'Email', editable: true, width: 140,},
   {
@@ -27,13 +32,13 @@ const columns = [
     width: 140,
     editable: true,
   },
-  { field: 'income', headerName: 'Income', width: 140,editable: true, },
+  { field: 'income', headerName: 'Income', minWidth: 135,editable: true, },
   {
     field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 120,
+    minWidth: 135,
     valueGetter: (params) =>
       `${params.getValue(params.id, 'firstname') || ''} ${
         params.getValue(params.id, 'lastname') || ''
@@ -77,6 +82,7 @@ export default function DataGridDemo() {
         rowsPerPageOptions={[5]}
         checkboxSelection
         disableSelectionOnClick
+       
       />
     </div>
   );
